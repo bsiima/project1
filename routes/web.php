@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{names}/{name}', 'firstcontroller@getWelcomepage','names@getPersons' );
+Route::get('/{name}', 'names@getPersons' );
+Route::get('/{name}', 'school@getSchoolName' );
+Route::get('/{name}', 'animals@getPetName' );
+Route::get('/{name}', 'books@getNovel' );
+Route::get('/{name}', 'city@getTown');
