@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class animals extends Controller
 {
-    protected function getPetName($name){
+    protected function getPetName($pet){
 
-        return 'I love'.$name;
+        return 'My pet is '.$pet;
        }
 }

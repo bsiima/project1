@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class city extends Controller
 {
-    protected function getTown($name){
+    protected function getTown($city){
 
-        return 'I love'.$name;
+        return 'I live in '.$city;
        }
 }

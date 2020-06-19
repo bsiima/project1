@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class books extends Controller
 {
-    protected function getNovel($name){
+    protected function getNovel($novel){
 
-        return 'I love'.$name;
+        return 'Iam the author of '.$novel;
        }
 }

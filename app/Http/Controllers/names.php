@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class names extends Controller
 {
-    protected function getPersons($name){
+    protected function getPersons($girl){
 
-        return 'My name is '.$name. ".Its nice to meet you.";
+        return 'My name is '.$girl. ".Its nice to meet you.";
        }
 }

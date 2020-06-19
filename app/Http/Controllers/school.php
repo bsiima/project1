@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class school extends Controller
 {
-    protected function getWelcomepage($name){
+    protected function getSchoolName($school){
 
-        return 'I love'.$name;
-       }
+        return 'I went to '.$school;
+       
+    }
 }
+
+
+

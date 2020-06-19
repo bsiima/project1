@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/{names}/{name}', 'firstcontroller@getWelcomepage','names@getPersons' );
-Route::get('/{name}', 'names@getPersons' );
-Route::get('/{name}', 'school@getSchoolName' );
-Route::get('/{name}', 'animals@getPetName' );
-Route::get('/{name}', 'books@getNovel' );
-Route::get('/{name}', 'city@getTown');
+//Route::get('/{name}' , 'firstcontroller@getWelcomepage');
+
+//Route::get('/{girl}', 'names@getPersons' );
+// Route::get('/{school}', 'school@getSchoolName' );
+// Route::get('/{pet}', 'animals@getPetName' );
+// Route::get('/{novel}', 'books@getNovel' );
+ Route::get('/{city}', 'city@getTown');
