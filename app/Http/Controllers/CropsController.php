@@ -15,6 +15,7 @@ class CropsController extends Controller
      * This function validates the crops request
      */
     protected function validateCropsRequest(){
+        return request();
         if(empty(request()->crop_name)){
             return redirect()->back()->withErrors('Please enter the crop name to proceed');
         }

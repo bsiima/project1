@@ -11,3 +11,12 @@
 |
 */
 
+
+Route::get('/home', 'HomeController@index')->name('Dashboard');
+Route::get('/view-yields','YieldsController@getYields')->name('Yields');
+Route::get('/add-yields-page','YieldsController@addYieldsPage');
+Route::get('/add-crop','CropsController@validateCropsRequest');
+Route::get('/add-yield','YieldsController@validateYield');
+Route::get('/logout','HomeController@logMeOut');
+Auth::routes();
+
