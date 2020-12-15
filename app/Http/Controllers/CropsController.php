@@ -15,13 +15,12 @@ class CropsController extends Controller
      * This function validates the crops request
      */
     protected function validateCropsRequest(){
-        return request();
+      
         if(empty(request()->crop_name)){
             return redirect()->back()->withErrors('Please enter the crop name to proceed');
         }
-        if(empty(request()->crop_price)){
-            return redirect()->back()->withErrors('Please enter the crop price to proceed');
-        }if(empty(request()->min_threshold)){
+        
+        if(empty(request()->min_threshold)){
             return redirect()->back()->withErrors('Please enter the minimum threshold to proceed');
         }if(empty(request()->max_threshold)){
             return redirect()->back()->withErrors('Please enter the maximum threshold to proceed');
@@ -34,12 +33,13 @@ class CropsController extends Controller
      * This function creates the crops
      */
     private function addNewCrop(){
+        
         $crop_obj = new Crop;
         $crop_obj->crop_name     = request()->crop_name;
-        $crop_obj->crop_price    = request()->crop_price;
         $crop_obj->min_threshold = request()->min_threshold;
         $crop_obj->max_threshold = request()->max_threshold;
         $crop_obj->created_by    = $this->authenticated_user->getLoggedInUserId();
+        $crop_obj->updated_by    = $this->authenticated_user->getLoggedInUserId();
         $crop_obj->save();
 
         return redirect()->back()->with('msg','New crop has been created successfully');
@@ -51,7 +51,6 @@ class CropsController extends Controller
     protected function editCrop($crop_id){
         Crop::where('id',$crop_id)->update(array(
             'crop_name'     => request()->crop_name,
-            'crop_price'    => request()->crop_price,
             'min_threshold' => request()->min_threshold,
             'max_threshold' => request()->max_threshold,
             'updated_by'    => $this->authenticated_user->getLoggedInUserId()
@@ -63,8 +62,22 @@ class CropsController extends Controller
     /**
      * This function gets the crops
      */
-    protected function getCrops($user_id){
-        $farm_crops = Crops::where('user_id',$user_id)->get();
+    protected function getCrops(){
+        $farm_crops = Crop::get();
         return $farm_crops;
+    }
+
+    protected function viewCrops(){
+        $all_crops = $this->getCrops();
+       return view('admin.all_crops_view',compact('all_crops'));
+
+   }
+
+   
+
+    protected function addCropPage(){
+        return view('admin.add_crop_page');
+
+
     }
 }

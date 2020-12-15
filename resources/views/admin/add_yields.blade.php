@@ -36,6 +36,10 @@
                                     <input type="text" name="yield_name" required class="form-control">
                                 </div>
                                 <div class="form-group">
+                                    <label class="control-label">Price</label>
+                                    <input type="text" name="price" required class="form-control">
+                                </div>
+                                <div class="form-group">
                                     <label class="control-label">Number Of Bunches</label>
                                     <input id="id-password" type="number" name="number_of_bags" required class="form-control">
                                 </div>

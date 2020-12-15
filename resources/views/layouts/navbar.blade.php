@@ -26,13 +26,13 @@
              </a>
           </li>
           <!-- START Messages menu (dropdown-list)-->
-          <li class="dropdown dropdown-list">
+          {{-- <li class="dropdown dropdown-list">
              <a href="#" data-toggle="dropdown" data-play="fadeIn" class="dropdown-toggle">
                 <em class="fa fa-envelope-o"></em>
                 <div class="label label-danger">21</div>
              </a>
              <!-- START Dropdown menu-->
-             <ul class="dropdown-menu">
+             {{-- <ul class="dropdown-menu">
                 <li class="dropdown-menu-header">You have 5 new messages</li>
                 <li>
                    <div class="scroll-viewport">
@@ -134,9 +134,9 @@
                    </a>
                 </li>
                 <!-- END dropdown footer-->
-             </ul>
+             </ul> --}}
              <!-- END Dropdown menu-->
-          </li>
+          </li> 
           <!-- END Messages menu (dropdown-list)-->
           <li>
              <!-- Button to clear all site options stored option from browser storage-->

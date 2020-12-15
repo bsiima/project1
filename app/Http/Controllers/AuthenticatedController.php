@@ -12,7 +12,7 @@ class AuthenticatedController extends Controller
      * This functions gets the loggedin user Id
      */
     public function getLoggedInUserId(){
-        return 1; //auth()->user()->id
+        return  auth()->user()->id;
     }
     /**
      * This function gets the tank radius for a loggedIn user

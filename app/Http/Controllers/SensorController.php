@@ -67,4 +67,18 @@ class SensorController extends Controller
         $max_id = Sensor::get()->Max('id');
         return $max_id;
     }
+
+    protected function fetchSensorReadings(){
+        $sensor_readings = $this->getReadings();
+        return view('admin.sensor_view',compact('sensor_readings'));
+ 
+
+    }
+    protected function getReadings(){
+        $sensorValues = Sensor::get();
+        return $sensorValues;
+    }
+
+   
+
 }

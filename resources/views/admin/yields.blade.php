@@ -29,10 +29,10 @@
                              <tr>
                                 <th>Id</th>
                                 <th>Name</th>
-                                <th>Price</th>
+                                <th>Price per Kg</th>
+                                <th>Weight(Kg)</th>
                                 <th>Harvested Bunches</th>
-                                <th>Weight</th>
-                                <th class="sort-alpha">Amount</th>
+                                <th class="sort-alpha"> Total Amount </th>
                              </tr>
                           </thead>
                           <tbody>
@@ -40,10 +40,10 @@
                               <tr class="gradeX">
                                  <td>{{$id + 1}}</td>
                                  <td>{{ $yield->yield_name}}</td>
-                                 <td>{{ number_format($yield->crop_price) }}</td>
-                                 <td>{{ $yield->number_of_bags}}</td>
+                                 <td>{{ number_format($yield->price) }}</td>
                                  <td>{{ number_format($yield->weight)}}</td>
-                                 <td>{{ number_format($yield->crop_price * $yield->weight)}} /=</td>
+                                 <td>{{ $yield->number_of_bags}}</td>
+                                 <td>{{ number_format($yield->price* $yield->weight)}} /= </td>
                               </tr>
                               @endforeach
                           </tbody>

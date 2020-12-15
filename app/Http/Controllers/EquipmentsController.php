@@ -60,4 +60,19 @@ class EquipmentsController extends Controller
         Equipment::find($equipment_id)->delete();
         return redirect()->back()->with('msg','Your operation to delete an item was successful');
     }
+
+    protected function addEquipment(){
+        return view('admin.add_equipment_page');
+
+    }
+    protected function getEquipment(){
+         $all_equip = $this->getFarmEquip();
+        return view('admin.Equipment_view',compact('all_equip'));
+
+    }
+
+    private function getFarmEquip(){
+        $farm_Equip = Equipment::get();
+        return $farm_Equip;
+    }
 }

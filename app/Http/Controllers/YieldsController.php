@@ -43,6 +43,7 @@ class YieldsController extends Controller
         $yield_obj->yield_name      = request()->yield_name;
         $yield_obj->number_of_bags  = request()->number_of_bags;
         $yield_obj->weight          = request()->weight;
+        $yield_obj->price          = request()->price;
         $yield_obj->crop_id         = $this->getCropId();
         $yield_obj->user_id         = $this->authenticated_user->getLoggedInUserId();
         $yield_obj->save();
@@ -57,7 +58,7 @@ class YieldsController extends Controller
      * This function gets the Yield
      */
     protected function getFarmYields(){
-        $farm_yields = Yields::join('crops','crops.id','yields.crop_id')->get();
+        $farm_yields = Yields::get();
         return $farm_yields;
     }
 

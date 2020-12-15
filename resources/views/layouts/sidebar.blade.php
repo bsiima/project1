@@ -11,6 +11,12 @@
              </a>
           </li>
           <li>
+            <a href="/sensor-readings" title="Sensor Readings">
+               <em class="fa fa-file-text-o"></em>
+               <span class="item-text">Sensor Readings</span>
+            </a>
+         </li>
+          <li>
              <a href="#" title="Yield" data-toggle="collapse-next" class="has-submenu">
                 <em class="fa fa-flask"></em>
                 <span class="item-text">Yield</span>
@@ -38,7 +44,7 @@
              <!-- START SubMenu item-->
              <ul class="nav collapse ">
                 <li>
-                   <a href="/add-farm-equipment" title="Add Equipment" data-toggle="" class="no-submenu">
+                   <a href="/add-equipment" title="Add Equipment" data-toggle="" class="no-submenu">
                       <span class="item-text">Add Equipment</span>
                    </a>
                 </li>
@@ -49,13 +55,8 @@
                 </li>
              </ul>
              <!-- END SubMenu item-->
-          </li>
-          <li>
-            <a href="/get-sensor-readings" title="Sensor Readings" data-toggle="collapse-next" class="has-submenu">
-               <em class="fa fa-file-text-o"></em>
-               <span class="item-text">Sensor Readings</span>
-            </a>
          </li>
+          
          <li>
             <a href="#" title="Crops" data-toggle="collapse-next" class="has-submenu">
                <em class="fa fa-file-text-o"></em>
@@ -64,7 +65,7 @@
             <!-- START SubMenu item-->
             <ul class="nav collapse ">
                <li>
-                  <a href="/add-crop" title="Add Crop" data-toggle="" class="no-submenu">
+                  <a href="/add-crop-page" title="Add Crop" data-toggle="" class="no-submenu">
                      <span class="item-text">Add Crop</span>
                   </a>
                </li>
@@ -84,7 +85,7 @@
             <!-- START SubMenu item-->
             <ul class="nav collapse ">
                <li>
-                  <a href="/add-users" title="Add Users" data-toggle="" class="no-submenu">
+                  <a href="/add-user-page" title="Add Users" data-toggle="" class="no-submenu">
                      <span class="item-text">Add Users</span>
                   </a>
                </li>
